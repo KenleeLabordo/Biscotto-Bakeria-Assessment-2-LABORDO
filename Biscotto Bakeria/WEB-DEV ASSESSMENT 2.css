@@ -10,6 +10,8 @@
 /* --------------------------------------------------
    Body Styling
 -------------------------------------------------- */
+
+
 body {
     background: #f28314; /* Background color */
     font-family: 'Inter', sans-serif;
@@ -22,7 +24,6 @@ h1 {
     font-weight: 100;
     color: white;
 }
-
 h2, p {
     font-family: "Quicksand", serif;
     font-weight: 500;
@@ -38,6 +39,8 @@ body::-webkit-scrollbar {
    Navbar
 -------------------------------------------------- */
 .navbar {
+
+    
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -55,6 +58,7 @@ body::-webkit-scrollbar {
 }
 
 .navbar ul {
+    
     list-style: none;
     display: flex;
     gap: 1.5rem;
@@ -65,9 +69,10 @@ body::-webkit-scrollbar {
     color: white;
     text-decoration: none;
     font-size: 1.4rem;
+    
 }
 
-.navbar a {
+.navbar a{
     position: relative;
     text-decoration: none;
     font-family: "Quicksand", serif;
@@ -75,7 +80,6 @@ body::-webkit-scrollbar {
     letter-spacing: 0.5px;
     padding: 0 0px;
 }
-
 .navbar a:after {
     content: "";
     position: absolute;
@@ -86,11 +90,9 @@ body::-webkit-scrollbar {
     bottom: -10px;
     transition: 0.3s;
 }
-
 .navbar a:hover {
     color: #ffffff;
 }
-
 .navbar a:hover:after {
     width: 100%;
 }
@@ -104,6 +106,7 @@ body::-webkit-scrollbar {
     padding: 10px 10%;
 }
 
+
 /* --------------------------------------------------
    Footer Section
 -------------------------------------------------- */
@@ -112,6 +115,7 @@ footer {
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
+    
 }
 
 .footer-icons {
@@ -140,6 +144,7 @@ footer {
 .footer-icons a:hover .svg-icon {
     fill: #fbf6de; /* Changes the icon color on hover (golden) */
 }  
+
 
 .footer-icons a img:hover {
     transform: scale(1.2);
@@ -183,12 +188,15 @@ footer p {
    Hero Section
 -------------------------------------------------- */
 .hero {
+    
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
     height: 650px;
     box-sizing: border-box;
+    
+   
 }
 
 .hero .hero-main {
@@ -198,16 +206,20 @@ footer p {
 }
 
 .hero .text-content {
+    
     font-size: 1.4em;
     max-width: 50%;
     padding-left: 10em;
+    
 }
 
 .hero h1 { 
     font-weight: 400;
+    
 }
 
 .hero p { 
+    
     padding-bottom: 1.5em;
     padding-right: 20px;
     text-align: justify;
@@ -224,7 +236,11 @@ footer p {
     background-color: #ffffff;
     border-radius: 8%;
     position: relative;
+    
 }
+
+
+
 
 .hero img {
     width: 100%; /* Adjust as needed */
@@ -232,8 +248,8 @@ footer p {
     object-fit: cover;
     max-height: 600px;
     padding-right: 2.8em;
+    
 }
-
 /* --------------------------------------------------
    Products Section 
 -------------------------------------------------- */
@@ -246,6 +262,7 @@ footer p {
 
 .featured {
     padding-top: 50px;
+
     font-weight: 400;
     text-align: center;
 }
@@ -255,25 +272,30 @@ footer p {
     margin: 0;
     display: grid;
     grid-template-rows: 500px 100px;
+    /* Updated grid-template-columns to center radio buttons */
     grid-template-columns: 1fr 30px 30px 30px 30px 30px 1fr; 
     align-items: center;
     justify-items: center;
     overflow: hidden; /* Hides overflow from other carousels */
 }
 
+
 .item img {
+    
     width: 350px;
     height: 450px;
     border-radius: 6%;
     overflow: hidden;
     background-color: #ece7e7;
     padding: 6px;
+    
 }
 
 .item h2 {
     font-weight: 500;
     margin-bottom: 2px;
     color: #ffffff;
+
 }
 
 div.item {
@@ -285,7 +307,8 @@ div.item {
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
-    transform: rotateY(calc(-6deg * var(--r))) translateX(calc(-300px * var(--r)));
+    transform: rotateY(calc(-6deg * var(--r)))
+        translateX(calc(-300px * var(--r)));
     z-index: calc(var(--items) - var(--abs)); /* Ensures the closest item has the highest z-index */
 }
 
@@ -304,6 +327,7 @@ main#carousel {
     --middle: 3;
     --position: 1;
     pointer-events: none;
+    
 }
 
 .carousel-btn {
@@ -322,16 +346,19 @@ main#carousel {
 
 #prevBtn {
     left: 30px; /* Moves closer to the images */
+    
 }
 
 #nextBtn {
     right: 30px; /* Moves closer to the images */
+    
 }
 
 .carousel-btn:hover {
     color: #fdfeba; /* Optional: Changes color on hover */
     box-shadow: #fff;
 }
+
 
 #carousel {
     grid-row: 1/2;
@@ -347,6 +374,10 @@ main#carousel {
     pointer-events: none;
     padding: 8px;
 }
+
+
+
+
 
 /* Ensure correct offsets for the items */
 div.item:nth-of-type(1) {
@@ -410,15 +441,16 @@ input:nth-of-type(5) {
 input:nth-of-type(5):checked ~ main#carousel {
     --position: 5;
 }
-
 /* --------------------------------------------------
    TESTIMONIAL SECTION
 -------------------------------------------------- */
+
 .testimonials {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
     justify-content: left;
+    
 }
 
 .testh1 h1 {
@@ -430,6 +462,7 @@ input:nth-of-type(5):checked ~ main#carousel {
 }
 
 .tcontainer {
+    
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Keep 3 columns */
     gap: 20px; /* Increase spacing between grid items */
@@ -460,6 +493,8 @@ input:nth-of-type(5):checked ~ main#carousel {
     width: 20px; /* Larger size for images */
     height: 20px;
     padding: 0.2em;
+    
+    
 }
 
 .tcontainer h2 {
@@ -473,135 +508,242 @@ input:nth-of-type(5):checked ~ main#carousel {
 
 .tcontainer p {
     font-size: 0.7em; /* Slightly larger font size for better readability */
-    line-height: 1.6; /* Increase line height for better readability */
-    color: #333; /* Darker color for better contrast */
+    color: #666; /* Slightly lighter text color for the paragraph */
+    line-height: 1.6; /* Improve readability by increasing line height */
 }
 
 
+
+
+
 /* --------------------------------------------------
-   Media Queries
+   Responsive Design
 -------------------------------------------------- */
 
-/* Mobile and small tablet responsiveness */
-@media screen and (max-width: 768px) {
+/* Phones: Small screen adjustments */
+@media (min-width: 510px) and (max-width: 720px) {
+    body {
+        padding: 0;
+        overflow-x: hidden;   
+
+    }
+
     .navbar {
-        padding: 2em 4em; /* Adjust padding for smaller screens */
+        flex-direction: column;
+        padding: 2em;
+        gap: 1em;
     }
 
     .brand h1 {
-        font-size: 2.5rem; /* Adjust brand font size */
+        font-size: 2.5rem;
+        text-align: left;
+        
     }
 
-    .hero .text-content {
-        padding-left: 2em; /* Adjust text content padding */
-        max-width: 80%; /* Increase width for smaller devices */
+    h1 {
+        font-size: clamp(1.5rem, 5vw, 3rem); /* Min: 1.5rem, Preferred: 5% of viewport width, Max: 3rem */
+    }
+    
+    p {
+        font-size: clamp(1rem, 2.5vw, 1.2rem); /* Adjusts smoothly across screen sizes */
+    }
+
+    .navbar ul {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.8rem;
+        background-color: white;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 200vh;
+        padding-top: 50px;
+        z-index: 100;
+        transition: right 0.5s;
+    }
+
+    .close-icon{ 
+        position: absolute;
+        top: 25px ;
+        left: 25px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .open-icon {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 60px;
+        right: 2em;
+    }
+
+    .navbar a { 
+        color: #f28314;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;  
+        margin-bottom: -150px;
     }
 
     .hero img {
-        width: 100%; /* Ensure the image fits within the screen */
-        height: auto;
+       width: 600px;
+       height: auto;
+       position:absolute;
+       top: 180px;
+       right: -300px;
+       z-index: -1;
     }
 
-    .footer-icons {
-        margin-bottom: 1rem;
+  
+    .hero .text-content {
+        position: absolute;
+        top: 200px;
+        left: 50px;
+        padding: 0;
+        
     }
 
-    .footer-icons a {
-        margin: 0 0.5rem; /* Maintain spacing between icons */
+    .hero p { 
+        font-size: 24px;
+    }
+    .hero h1 { 
+
+        text-align: left;
+        font-size: 32px;
+    
+    }
+    .tcontainer {
+        grid-template-columns: 1fr;
+        padding: 1em;
     }
 
-    .testimonials .tcontainer {
-        grid-template-columns: 1fr; /* Stack testimonials on small screens */
+    .products {
+        height: 500px;
+    }
+
+    .Products h1 {
+        font-size: 32px;
     }
 
     .product-s {
-        grid-template-columns: 1fr 30px 1fr;
+        height: 800px;
+        margin-top: -200px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+        
+    }
+
+    .carousel-btn { 
+        top: 650px;
+    }
+    
+}
+
+/* Tablet Screens: Min-width 721px to Max-width 1024px */
+@media (min-width: 721px) and (max-width: 1024px) {
+    body {
+        padding: 0;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3em;
+        gap: 2em;
+    }
+
+    .brand h1 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+    
+    p {
+        font-size: clamp(1.2rem, 3vw, 1.5rem);
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: transparent;
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        transition: none;
+    }
+
+    .close-icon, 
+    .open-icon {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: row;
+        text-align: left;
+        margin-bottom: -100px;
+    }
+
+    .hero img {
+        position: absolute;
+        top: 360px;
+        right: -30px;
+        max-width: 70%; /* Adjusted to 50% */
+        z-index: -1;
+    }
+
+    .hero .text-content {
+        position: static;
+        padding: 1em;
+        max-width: 50%; /* Adjusted to 50% */
+    }
+
+    .hero p {
+        font-size: 1.5rem; /* Adjusted size */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjusted size */
+    }
+
+    .tcontainer {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+        padding: 2em;
+    }
+
+    .products {
+        height: 600px;
+    }
+
+    .product-s {
+        height: auto;
+        margin-top: 0;
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for product display */
         grid-template-rows: auto;
     }
 
     .carousel-btn {
-        font-size: 48px; /* Make the carousel buttons smaller */
-    }
-
-    .footer ul {
-        gap: 1rem; /* Decrease spacing between footer items */
-    }
-
-    .footer a {
-        font-size: 1.2em; /* Reduce font size for smaller screens */
+        top: auto;
     }
 }
 
-/* Medium screen responsiveness (tablets and small desktops) */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-    .navbar {
-        padding: 3em 5em; /* Adjust navbar padding */
+/* Desktop Screens: Min-width 1024px to Max-width 2000px */
+@media (min-width: 1024px) and (max-width: 2000px) {
+    .open-icon {
+        display: none;
     }
 
-    .brand h1 {
-        font-size: 3rem; /* Adjust brand font size */
+    .close-icon {
+        display: none;
     }
 
-    .hero .text-content {
-        padding-left: 5em; /* Adjust text content padding */
-        max-width: 60%; /* Limit width for better readability */
-    }
-
-    .footer-icons a {
-        margin: 0 0.8rem; /* Increase spacing between icons slightly */
-    }
-
-    .testimonials .tcontainer {
-        grid-template-columns: repeat(2, 1fr); /* Adjust grid for 2 columns */
-    }
-
-    .carousel-btn {
-        font-size: 56px; /* Adjust size for medium screens */
-    }
-
-    .footer ul {
-        gap: 1.5rem; /* Increase spacing between footer items */
-    }
-
-    .footer a {
-        font-size: 1.3em; /* Adjust font size for medium screens */
-    }
 }
-
-/* Desktop and larger screen responsiveness */
-@media screen and (min-width: 1025px) {
-    .navbar {
-        padding: 4em 8em; /* Larger padding for desktops */
-    }
-
-    .brand h1 {
-        font-size: 4rem; /* Maintain larger font size for desktops */
-    }
-
-    .hero .text-content {
-        padding-left: 10em; /* Adjust padding for better positioning */
-        max-width: 50%; /* Maintain the ideal width */
-    }
-
-    .footer-icons a {
-        margin: 0 1rem; /* Maintain spacing between icons */
-    }
-
-    .testimonials .tcontainer {
-        grid-template-columns: repeat(3, 1fr); /* Keep 3 columns on larger screens */
-    }
-
-    .carousel-btn {
-        font-size: 64px; /* Keep carousel button size larger */
-    }
-
-    .footer ul {
-        gap: 2rem; /* Increase spacing between footer items */
-    }
-
-    .footer a {
-        font-size: 1.5em; /* Maintain larger font size for footers */
-    }
-}
-
-
