@@ -1,6 +1,6 @@
 # Biscotto-Bakeria-Assessment-2-LABORDO
 
-# Disclaimer
+Disclaimer!
 
 In order to view all the website's features, do the following; 
 
