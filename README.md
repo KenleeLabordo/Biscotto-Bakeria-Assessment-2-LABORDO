@@ -8,4 +8,6 @@ In order to view all the website's features, do the following;
 
 2) Open the file 'Indeks.html' in Visual Studio code (or whatever program you are using) 
 
-3) Enjoy!!
+3) Right Click and Run with live server (Download the live server extension if you don't yet have it)
+
+   ENJOY!
