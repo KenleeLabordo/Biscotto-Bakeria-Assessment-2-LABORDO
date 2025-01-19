@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscotto Bakeria</title>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="WEB-DEV ASSESSMENT 2.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========================= HEADER SECTION ========================= -->
+    <header>
+        <div class="navbar">
+            <!-- Brand Name -->
+            <div class="brand">
+                <h1>Biscotto Bakeria</h1>
+            </div>
+
+            <!-- Hamburger Menu Icon -->
+            <img class="open-icon" onclick="openmenu()" src ="Assets\icon\icons8-hamburger-48.png">
+            
+            <!-- Side Menu -->
+            <ul id="sidemenu">
+                <li><h2><a href="indeks.html">Home</a></h2></li>
+                <li><h2><a href="products.html">Shop</a></h2></li>
+                <li><h2><a href="aboutme.html">About</a></h2></li>
+                <li><h2><a href="contact.html">Contact</a></h2></li>
+                <!-- Close Icon -->
+                <img class="close-icon" onclick="closemenu()" src ="Assets\icon\icons8-x-48.png">
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========================= HERO SECTION ========================= -->
+    <div class="hero" id="hero">
+        <div class="hero-main">
+            <div class="text-content">
+                <h1>Simple, Yet Delectable</h1>
+                <p>Discover and indulge in our irresistible aroma of freshly baked croissants. Golden, flaky, and crafted to perfection.</p>
+                <p><a href="products.html">Browse Shop</a></p>
+            </div>
+            <img src="Assets/croissant-hero.png" alt="Hero image of croissant">
+        </div>
+    </div>
+
+    <!-- ========================= FEATURED PRODUCT SECTION ========================= -->
+    <div class="Products">
+        <h1 class="featured">Featured Products</h1>
+        <div class="product-s">
+            <!-- Carousel Buttons -->
+            <button id="prevBtn" class="carousel-btn">❮</button>
+            
+            <!-- Carousel -->
+            <main id="carousel">
+                <div class="item">
+                    <img src="Assets/carousel/carousel-1.jpg" alt="Cheese Zaatar"> 
+                    <h2 class="name">Cheese Zaatar</h2>
+                </div>
+                <div class="item">
+                    <img src="Assets/carousel/carousel-2.jpg" alt="Pandesal"> 
+                    <h2 class="name">Pandesal</h2>
+                </div>
+                <div class="item">
+                    <img src="Assets/carousel/carousel-3.jpg" alt="Croissant"> 
+                    <h2 class="name">Croissant</h2>
+                </div>
+                <div class="item">
+                    <img src="Assets/carousel/carousel-4.jpg" alt="Empanada"> 
+                    <h2 class="name">Empanada</h2>
+                </div>
+                <div class="item">
+                    <img src="Assets/carousel/carousel-5.jpg" alt="Spanish Bread"> 
+                    <h2 class="name">Spanish Bread</h2>
+                </div>
+            </main>
+            
+            <!-- Carousel Buttons -->
+            <button id="nextBtn" class="carousel-btn">❯</button>
+        </div>
+    </div>
+
+    <!-- ========================= TESTIMONIAL SECTION ========================= -->
+    <main class="container">
+        <section class="testimonials" id="testimonials">
+            <div class="testh1">
+                <h1>Testimonials</h1>
+            </div>
+            <div class="tcontainer">
+                <!-- Testimonial 1 -->
+                <div class="tcon1"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-half-svgrepo-com.svg"> 
+                    <h2>"Spectacular!"</h2>
+                    <p><i>Michellin</i></p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="tcon2"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <h2>"Bakery Of The Year"</h2>
+                    <p><i>The New York Times</i></p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="tcon3"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-half-svgrepo-com.svg"> 
+                    <h2>"Phenomenal Quality"</h2>
+                    <p><i>Gordon Ramsey</i></p>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="tcon4"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <h2>"Best Croissants in the Game"</h2>
+                    <p><i>Guinness World Records</i></p>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="tcon5"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-half-svgrepo-com.svg"> 
+                    <h2>"Exquisite Atmosphere"</h2>
+                    <p><i>Time Magazine</i></p>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="tcon6"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-svgrepo-com.svg"> 
+                    <img src="Assets/icon/star-half-svgrepo-com.svg"> 
+                    <h2>"Outstanding Service"</h2>
+                    <p><i>Various Critics</i></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================= FOOTER SECTION ========================= -->
+    <footer>
+        <div class="footer-icons">
+            <!-- Social Media Links -->
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-facebook.svg" alt="Facebook"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-instagram-32.png" alt="Instagram"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-x-50.png" alt="X"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-github-32.png" alt="Github"></a>
+        </div>
+        <div class="footer">
+            <!-- Footer Navigation Links -->
+            <ul>
+                <li><h2><a href="indeks.html">Home</a></h2></li>
+                <li><h2><a href="products.html">Shop</a></h2></li>
+                <li><h2><a href="aboutme.html">About</a></h2></li>
+                <li><h2><a href="contact.html">Contact</a></h2></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Biscotto Bakeria. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ========================= SCRIPTS ========================= -->
+    <script>
+        // Side Menu Toggle Functions
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+
+    <script>
+        // Carousel Functionality
+        document.addEventListener("DOMContentLoaded", () => {
+            const carousel = document.querySelector("#carousel");
+            const items = document.querySelectorAll(".item");
+            const totalItems = items.length;
+            let position = 3;
+
+            const updateCarousel = () => {
+                items.forEach((item, index) => {
+                    const offset = index + 1 - position;
+                    const absOffset = Math.abs(offset);
+                    item.style.setProperty("--offset", offset);
+                    item.style.setProperty("--r", offset);
+                    item.style.setProperty("--abs", absOffset);
+                });
+            };
+
+            // Prev Button
+            document.getElementById("prevBtn").addEventListener("click", () => {
+                position = position === totalItems ? 1 : position + 1;
+                updateCarousel();
+            });
+
+            // Next Button
+            document.getElementById("nextBtn").addEventListener("click", () => {
+                position = position === 1 ? totalItems : position - 1;
+                updateCarousel();
+            });
+
+            updateCarousel();
+        });
+    </script>
+</body>
+</html>

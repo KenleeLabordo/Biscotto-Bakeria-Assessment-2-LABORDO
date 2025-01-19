@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscotto Bakeria</title>
+    
+    <!-- ========================= EXTERNAL STYLESHEET ========================= -->
+    <link rel="stylesheet" href="products.css">
+    
+    <!-- ========================= GOOGLE FONTS ========================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========================= HEADER SECTION ========================= -->
+    <header>
+        <div class="navbar">
+            <div class="brand">
+                <h1>Biscotto Bakeria</h1>
+            </div>
+
+            <!-- Hamburger Icon for Menu -->
+            <img class="open-icon" onclick="openmenu()" src ="Assets\icon\icons8-hamburger-48.png">
+            
+            <!-- Side Menu -->
+            <ul id="sidemenu">
+                <li><h2><a href="indeks.html">Home</a></h2></li>
+                <li><h2><a href="products.html">Shop</a></h2></li>
+                <li><h2><a href="aboutme.html">About</a></h2></li>
+                <li><h2><a href="contact.html">Contact</a></h2></li>
+                
+                <!-- Close Icon for Menu -->
+                <img class="close-icon" onclick="closemenu()" src ="Assets\icon\icons8-x-48.png">
+            </ul>
+        </div>
+    </header>
+    
+    <!-- ========================= PRODUCTS SECTION ========================= -->
+    <div class="preshop"> 
+        <h1>Products</h1>
+    </div>
+    <section id="shop"> 
+        <!-- Content for products will be loaded dynamically here -->
+    </section>
+
+    <!-- ========================= FOOTER SECTION ========================= -->
+    <footer>
+        <div class="footer-icons">
+            <!-- Social Media Icons -->
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-facebook.svg" alt="Facebook"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-instagram-32.png" alt="Instagram"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-x-50.png" alt="X"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-github-32.png" alt="Github"></a>
+        </div>
+        <div class="footer">
+            <!-- Footer Links -->
+            <ul>
+                <li><h2><a href="indeks.html">Home</a></h2></li>
+                <li><h2><a href="products.html">Shop</a></h2></li>
+                <li><h2><a href="aboutme.html">About</a></h2></li>
+                <li><h2><a href="contact.html">Contact</a></h2></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Biscotto Bakeria. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ========================= SCRIPT FOR LOADING PRODUCTS ========================= -->
+    <script>
+        // Path to the JSON file
+        const jsonFilePath = "bakeryItems.json"; // Ensure this matches the location of your JSON file relative to products.html
+        
+        // Function to fetch JSON data and display items
+        async function fetchBakeryItems() {
+            try {
+                // Fetching the JSON data
+                const response = await fetch(jsonFilePath);
+                const data = await response.json();
+        
+                // Get the bakery items array
+                const bakeryItems = data.bakeryItems;
+        
+                // Select the shop section
+                const shopContainer = document.getElementById("shop");
+        
+                // Apply styles to the container
+                shopContainer.classList.add("shop-container");
+        
+                // Loop through the bakery items and generate HTML
+                bakeryItems.forEach(item => {
+                    const itemCard = document.createElement("div");
+                    itemCard.className = "item-card";
+        
+                    itemCard.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}" />
+                        <h3>${item.name}</h3>
+                        <p>Category: ${item.category}</p>
+                        <p>Price: $${item.price.toFixed(2)}</p>
+                        <p class="${item.available ? 'in-stock' : 'out-of-stock'}">
+                            ${item.available ? "In Stock" : "Out of Stock"}
+                        </p>
+                    `;
+        
+                    shopContainer.appendChild(itemCard);
+                });
+            } catch (error) {
+                console.error("Error fetching the bakery items JSON:", error);
+            }
+        }
+        
+        // Call the function to load the bakery items
+        fetchBakeryItems();
+    </script>
+
+    <!-- ========================= EXTERNAL JAVASCRIPT ========================= -->
+    <script src="shop.js"></script>
+
+    <!-- ========================= SIDEMENU TOGGLE SCRIPTS ========================= -->
+    <script>
+        // Function to open the side menu
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        // Function to close the side menu
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+    
+</body>
+</html>

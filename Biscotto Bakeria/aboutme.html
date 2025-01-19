@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biscotto Bakeria</title>
+    
+    <!-- ========================= EXTERNAL STYLESHEET ========================= -->
+    <link rel="stylesheet" href="aboutme.css">
+    
+    <!-- ========================= GOOGLE FONTS ========================= -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN:wght@100..400&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ========================= HEADER SECTION ========================= -->
+    <header>
+        <div class="navbar">
+            <div class="brand">
+                <h1>Biscotto Bakeria</h1>
+            </div>
+
+            <!-- Hamburger Icon for Menu -->
+            <img class="open-icon" onclick="openmenu()" src ="Assets\icon\icons8-hamburger-48.png">
+            
+            <!-- Side Menu -->
+            <ul id="sidemenu">
+                <li><h2><a href="indeks.html">Home</a></h2></li>
+                <li><h2><a href="products.html">Shop</a></h2></li>
+                <li><h2><a href="aboutme.html">About</a></h2></li>
+                <li><h2><a href="contact.html">Contact</a></h2></li>
+                
+                <!-- Close Icon for Menu -->
+                <img class="close-icon" onclick="closemenu()" src ="Assets\icon\icons8-x-48.png">
+            </ul>
+        </div>
+    </header>
+
+    <!-- ========================= ABOUT SECTION ========================= -->
+    <main class="container">
+        <section class="about" id="about">
+            <div class="about-col-2">
+                <h1>About Us</h1>
+                <p>
+                    Welcome to <b>Biscotto Bakeria!</b> your go-to destination for freshly baked delights! 
+                    We specialize in crafting artisan breads, delectable pastries, and custom cakes 
+                    made from the finest ingredients. 
+                    
+                    Our passion is bringing joy to your table with every bite, 
+                    whether you're celebrating a special occasion or indulging in everyday treats. 
+                    At Biscotto Bakeria, we believe in the magic of home-baked goodness delivered right to your door.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <!-- ========================= FOOTER SECTION ========================= -->
+    <footer>
+        <div class="footer-icons">
+            <!-- Social Media Icons -->
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-facebook.svg" alt="Facebook"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-instagram-32.png" alt="Instagram"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-x-50.png" alt="X"></a>
+            <a href=""><img class="svg-icon" src="Assets/icon/icons8-github-32.png" alt="Github"></a>
+        </div>
+        <div class="footer">
+            <!-- Footer Links -->
+            <ul>
+                <li><h2><a href="indeks.html">Home</a></h2></li>
+                <li><h2><a href="products.html">Shop</a></h2></li>
+                <li><h2><a href="aboutme.html">About</a></h2></li>
+                <li><h2><a href="contact.html">Contact</a></h2></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Biscotto Bakeria. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ========================= SIDEMENU TOGGLE SCRIPTS ========================= -->
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+
+        // Function to open the side menu
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+
+        // Function to close the side menu
+        function closemenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
